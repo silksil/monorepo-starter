@@ -2,9 +2,7 @@
 
 import { forwardRef } from "react";
 import { Fallback, Image, Root } from "@radix-ui/react-avatar";
-import { cn } from "@/lib/utils";
-
-const Avatar = forwardRef<
+import { cn } from "../lib/utils";const Avatar = forwardRef<
   React.ElementRef<typeof Root>,
   React.ComponentPropsWithoutRef<typeof Root>
 >(({ className, ...props }, ref) => (

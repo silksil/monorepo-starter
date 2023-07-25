@@ -19,9 +19,7 @@ import {
   Trigger,
 } from "@radix-ui/react-dropdown-menu";
 import { Check, ChevronRight, Circle } from "lucide-react";
-import { cn } from "@/lib/utils";
-
-const DropdownMenu = Root;
+import { cn } from "../lib/utils";const DropdownMenu = Root;
 
 const DropdownMenuTrigger = Trigger;
 

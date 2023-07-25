@@ -4,7 +4,8 @@ import * as React from "react";
 import { format } from "date-fns";
 import { CalendarIcon, ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker } from "react-day-picker";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
+
 import { Button, buttonVariants } from "./Button";
 import { Popover, PopoverContent, PopoverTrigger } from "./Popover";
 
