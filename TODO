@@ -1,5 +1,7 @@
 [ ] Internationalization
 [ ] Component library representation
-[ ] Include brand color
+[ ] Updated colors
+    [ ] brand color
+    [ ] error color
 [ ] error logging
 

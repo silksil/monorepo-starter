@@ -5,8 +5,6 @@ focus on business logic instead of complex project setup.
 
 Free. Open Source.
 
-Created and maintained by [@jakubhavej](https://twitter.com/jakubhavej)
-
 ## What's inside?
 
 It's based on [Turborepo](https://turbo.build/) project structure. Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
@@ -14,11 +12,10 @@ It's based on [Turborepo](https://turbo.build/) project structure. Each package/
 ### Apps and Packages
 
 - `web`: a [Next.js](https://nextjs.org/) app (the main one, used for demo purposes)
-- `docs`: another [Next.js](https://nextjs.org/) app
+- `next_storybook`: another [Next.js](https://nextjs.org/) app storybook.
 
 A collection of reusable and **ready-to-use packages** used throughout the monorepo:
 
-- `database`: powered by [Prisma](https://www.prisma.io/), the Node.js and Typescript ORM.
 - `eslint-config-custom`: [ESLing](https://eslint.org/) configurations.
 - `prettier-config`: [Prettier](https://prettier.io/) configurations.
 - `tailwind-config`: [Tailwind CSS](https://tailwindcss.com/) configurations.
@@ -27,25 +24,11 @@ A collection of reusable and **ready-to-use packages** used throughout the monor
 
 A **work-in-progress packages:**
 
-- `tRpc`: End-to-end typesafe APIs made easy.
-- `File storage`: A tooling for uploading and storing files.
-- `Internationalization`: Translations and related management.
-- `Emailing`: Sending transactional emails in-app.
-- `Chrome extension`: A boilerplate for creating Chrome extensions using React and Typescript.
-- `Content management system (CMS)`: A headless CMS integration.
-- `Analytics`: A tooling for collecting essential insights about site usage and performance.
+-
 
-## Using the starter pack
-
-Clone the repository:
-
-```sh
-git clone git@github.com:jhavej/turbo-starter.git
-```
+## Gettig started
 
 Install `pnpm` and `Node v18.16.0` (preferably via [nvm](https://github.com/nvm-sh))
-
-Create a `.env.local` file based on the provided `.env.local.example` - this enables Google OAuth and a connection to a PostgreSQL database (create one e.g. on [Vercel](https://vercel.com/storage/postgres) or [Supabase](https://supabase.com/) -- both will work out of the box once connected via the environment variables)
 
 Install project dependencies:
 
