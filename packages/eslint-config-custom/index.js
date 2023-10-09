@@ -8,4 +8,12 @@ module.exports = {
       presets: [require.resolve("next/babel")],
     },
   },
+  // overrides: [
+  //   {
+  //     files: ["**/ui/locales/**/*.{ts,js}"],
+  //     rules: {
+  //       "import/no-anonymous-default-export": 0,
+  //     },
+  //   },
+  // ],
 };

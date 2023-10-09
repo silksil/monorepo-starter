@@ -43,7 +43,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           <FormProvider {...formMethods}>
             <form onSubmit={handleSubmit(onSubmit)}>
               <RHFInputText label="Email" name="email" />
-              <RHFInputText label="Password" name="password" />
+              <RHFInputText label="Password" name="password" type="password" />
               <SubmitButton className="w-full" isLoading={isLoading}>
                 Register
               </SubmitButton>
