@@ -1,10 +1,3 @@
-# Turborepo Starter Pack
-
-This is an opinionated Javascript/Typescript monorepo starter pack built on top-notch technologies that enables you to
-focus on business logic instead of complex project setup.
-
-Free. Open Source.
-
 ## What's inside?
 
 It's based on [Turborepo](https://turbo.build/) project structure. Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
@@ -21,8 +14,6 @@ A collection of reusable and **ready-to-use packages** used throughout the monor
 - `tailwind-config`: [Tailwind CSS](https://tailwindcss.com/) configurations.
 - `tsconfig`: [Typescript](https://www.typescriptlang.org/) configurations.
 - `ui`: Beautifully designed components by [shadcn/ui](https://ui.shadcn.com/). Based on [Radix](https://www.radix-ui.com/) & [Tailwind CSS](https://tailwindcss.com/) & [Lucide Icons](https://lucide.dev/). Fully customizable.
-
-A **work-in-progress packages:**
 
 -
 
@@ -70,3 +61,11 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+## Install a package to a app/package/workspace
+
+Install
+`pnpm add <package> --filter <workspace>`
+
+Update:
+`pnpm update <package> --filter <workspace>`

@@ -1,7 +1,13 @@
-[ ] Internationalization
-[ ] Component library representation
+=[ ] Internationalization => https://locize.com/blog/next-13-app-dir-i18n/
+[ x ] Component library representation
 [ ] Updated colors
-    [ ] brand color
-    [ ] error color
+[ ] brand color
+[ ] error color
 [ ] error logging
-
+[ ] create a src folder
+[ ] include github actions to create PR to automatically upate packages
+[ ] update turbo.json
+[ ] deploy
+[ ] include data analytics tools
+[ ] static testing
+[ ] include husky
