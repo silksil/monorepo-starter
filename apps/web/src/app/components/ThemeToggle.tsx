@@ -6,7 +6,6 @@ import { Button } from "ui/components/Button";
 
 export const ThemeToggle = () => {
   const { setTheme, theme } = useTheme();
-  const sil = "sil";
 
   return (
     <Button

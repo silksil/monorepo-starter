@@ -62,10 +62,16 @@ Learn more about the power of Turborepo:
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 
-## Install a package to a app/package/workspace
+## Install a package
+
+### Install a package to a app/package/workspace
 
 Install
 `pnpm add <package> --filter <workspace>`
 
 Update:
 `pnpm update <package> --filter <workspace>`
+
+## Install a package to the root
+
+`pnpm add <package> -w`
