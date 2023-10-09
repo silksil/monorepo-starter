@@ -1,37 +1,30 @@
 "use client";
 
-import { use } from "react";
 import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  DefaultValues,
-  FormProvider,
-  SubmitHandler,
-  useForm,
-} from "react-hook-form";
-import { Button } from "ui";
+import { FormProvider, useForm } from "react-hook-form";
+import { Button, RHFInputText } from "ui";
 import { GitHub } from "ui/icons";
 import { z } from "zod";
 import { siteConfig } from "@/config/site";
 
+const schema = z.object({
+  message: z.string(),
+});
+
 const Homepage = () => {
-  const schema = z.object({
-    subject: z.string(),
-    message: z.string(),
-  });
   type FormData = z.infer<typeof schema>;
   const formMethods = useForm<FormData>({
     resolver: zodResolver(schema),
     defaultValues: {
-      subject: "",
       message: "",
     },
   });
-  const {
-    reset,
-    handleSubmit,
-    formState: { isValid },
-  } = formMethods;
+  const { handleSubmit } = formMethods;
+
+  const onSubmit = (data: FormData) => {
+    alert(JSON.stringify(data));
+  };
 
   return (
     <div className="container flex flex-col md:flex-row gap-24 py-8 pt-6 md:py-12">

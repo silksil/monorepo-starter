@@ -18,3 +18,4 @@ export { RadioGroup, RadioGroupItem } from "./RadioGroup";
 export { Switch } from "./Switch";
 export { Slider } from "./Slider";
 export { Calendar } from "./Calendar";
+export { DatePicker } from "./DatePicker";

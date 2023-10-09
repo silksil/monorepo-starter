@@ -1,3 +1,5 @@
+"use client";
+
 import { forwardRef } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { cn } from "@/lib/utils";
@@ -9,7 +11,7 @@ import { InputProps } from "../inputs/Input";
 
 type RHFInputProps = FormInputProps & InputProps;
 
-export const RHFInput = forwardRef<HTMLInputElement, RHFInputProps>(
+export const RHFInputText = forwardRef<HTMLInputElement, RHFInputProps>(
   (
     { label, id = "", name, className, helperText, type = "text", ...other },
     ref
@@ -63,3 +65,5 @@ export const RHFInput = forwardRef<HTMLInputElement, RHFInputProps>(
     );
   }
 );
+
+RHFInputText.displayName = "RHFInputText";
