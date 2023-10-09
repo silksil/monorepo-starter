@@ -4,7 +4,7 @@
 
 [ ] error logging
 [ x] create a src folder
-[ ] include github actions to create PR to automatically upate packages
+[ x ] include github actions to create PR to automatically upate packages
 [ ] update turbo.json
 [ ] deploy
 [ ] include data analytics tools
