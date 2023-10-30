@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Button } from "ui";
 import { GitHub } from "ui/icons";
-import { z } from "zod";
 import { siteConfig } from "@/config/site";
 
 const Homepage = () => {

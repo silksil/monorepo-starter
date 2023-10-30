@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import { TailwindIndicator } from "ui";
 import { fontSans } from "ui/lib/fonts";
-import { cn } from "ui/lib/utils";
 import { siteConfig } from "@/config/site";
 import { Navbar } from "@/app/components/Navbar";
 import Providers from "../Providers";
 import "ui/styles/globals.css";
+import { cn } from "ui/lib/utils";
 
 export const metadata: Metadata = {
   title: {

@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { buttonVariants } from "ui";
-import { cn } from "@/lib/utils";
+import { buttonVariants } from "ui/components/Button";
+import { cn } from "ui/lib/utils";
 import { UserAuthForm } from "../components/UserAuthForm";
 
 export const metadata: Metadata = {
