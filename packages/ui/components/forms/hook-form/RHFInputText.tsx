@@ -2,9 +2,10 @@
 
 import { forwardRef } from "react";
 import { Controller, useFormContext } from "react-hook-form";
-import { FieldErrorText, FieldHelperText } from "..";
 import { cn } from "../../../lib/utils";
 import { FormInputProps } from "../@types";
+import { FieldErrorText } from "../FieldErrorText";
+import { FieldHelperText } from "../FieldHelperText";
 import { FormGroup } from "../FormGroup";
 import { Input, Label } from "../inputs";
 import { InputProps } from "../inputs/Input";
@@ -65,3 +66,5 @@ export const RHFInputText = forwardRef<HTMLInputElement, RHFInputProps>(
     );
   }
 );
+
+RHFInputText.displayName = "RHFInputText";

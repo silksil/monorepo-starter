@@ -8,7 +8,7 @@ const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => (
 );
 
 const Providers: React.FC<React.PropsWithChildren> = ({ children }) => (
-  <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+  <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
     {children}
   </ThemeProvider>
 );

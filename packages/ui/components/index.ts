@@ -35,5 +35,19 @@ export {
   DropdownMenuRadioGroup,
 } from "./Dropdown";
 export { TailwindIndicator } from "./TailwindIndicator";
+export { Toaster } from "./Toaster";
+export { Badge } from "./Badge";
+export {
+  Sheet,
+  SheetTrigger,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetFooter,
+  SheetTitle,
+  SheetDescription,
+} from "./Sheet";
+
+export { Tabs, TabsList, TabsTrigger, TabsContent } from "./Tabs";
 
 export * from "./forms";

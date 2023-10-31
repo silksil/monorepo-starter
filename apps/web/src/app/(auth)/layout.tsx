@@ -1,49 +1,40 @@
-import { Metadata } from "next";
-import { TailwindIndicator } from "ui";
-import { fontSans } from "ui/lib/fonts";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
-import { Navbar } from "@/app/components/Navbar";
-import Providers from "../Providers";
 import "ui/styles/globals.css";
-import { cn } from "ui/lib/utils";
-
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
-  },
-};
+import { Logo } from "../_components/Logo";
 
 interface RootLayoutProps {
   children: React.ReactNode;
   modal: React.ReactNode;
 }
 
-const RootLayout = async ({ children, modal }: RootLayoutProps) => (
-  <html lang="en" suppressHydrationWarning>
-    <head />
-    <body
-      className={cn(
-        "min-h-screen bg-background font-sans antialiased",
-        fontSans.variable
-      )}
-    >
-      <Providers>
-        {children}
-        <TailwindIndicator />
-      </Providers>
-    </body>
-  </html>
+const AuthLayout = async ({ children }: RootLayoutProps) => (
+  <>
+    <div className="container relative h-[100vh] flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
+      <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
+        <div className="absolute inset-0 bg-zinc-900" />
+        <div className="relative z-20 flex items-center text-lg font-medium">
+          <Logo />
+          {siteConfig.name}
+        </div>
+        <div className="relative z-20 mt-auto">
+          <blockquote className="space-y-2">
+            <p className="text-lg">
+              &ldquo;This starter template has saved us countless hours of work
+              and helped us deliver stunning designs faster than ever
+              before.&rdquo;
+            </p>
+            <footer className="text-sm">Client X</footer>
+          </blockquote>
+        </div>
+      </div>
+      <div className="pt-14 md:pt-0lg:p-8">
+        <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+          {children}
+        </div>
+      </div>
+    </div>
+  </>
 );
 
-export default RootLayout;
+export default AuthLayout;

@@ -7,13 +7,15 @@ export const metadata: Metadata = {
   description: "Authentication forms built using the components.",
 };
 
-export default function LoginPage() {
+export default function RegisterPage() {
   return (
     <>
       <div className="flex flex-col space-y-2 text-center">
-        <h1 className="text-2xl font-semibold tracking-tight">Login</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">
+          Create an account
+        </h1>
         <p className="text-sm text-muted-foreground">
-          Enter your email and password below to login
+          Enter your information below to create your account
         </p>
       </div>
       <UserAuthForm />

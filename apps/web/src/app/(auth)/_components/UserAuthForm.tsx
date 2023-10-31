@@ -4,6 +4,8 @@ import * as React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormProvider, useForm } from "react-hook-form";
 import { RHFInputText, SubmitButton } from "ui";
+import { ToastAction } from "ui/components/Toast";
+import { toast } from "ui/components/Toaster";
 import { cn } from "ui/lib/utils";
 import { z } from "zod";
 
@@ -33,6 +35,12 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
 
     setTimeout(() => {
       setIsLoading(false);
+      toast({
+        variant: "destructive",
+        title: "Logged in failed ",
+        description: "Please contact support",
+        action: <ToastAction altText="Goto schedule to undo">Undo</ToastAction>,
+      });
     }, 3000);
   }
 
