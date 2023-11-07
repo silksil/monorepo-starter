@@ -5,7 +5,6 @@ import { cn } from "ui/lib/utils";
 import Providers from "./Providers";
 import "ui/styles/globals.css";
 import { siteConfig } from "../config/site";
-import Navbar from "./_components/Navbar";
 
 export const metadata: Metadata = {
   title: {

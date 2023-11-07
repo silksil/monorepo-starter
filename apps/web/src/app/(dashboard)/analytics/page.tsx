@@ -152,7 +152,7 @@ export default function Dashboard() {
                 <CardHeader>
                   <CardTitle>Overview</CardTitle>
                 </CardHeader>
-                <CardContent className="pl-2">
+                <CardContent className="pl-2 hidden lg:flex">
                   <Statistics />
                 </CardContent>
               </Card>

@@ -11,52 +11,20 @@ import {
   SheetTrigger,
 } from "ui";
 import { cn } from "ui/lib/utils";
+import { NavigationItem, dashboardNavItems } from "@/config/nav";
 import { Logo } from "../_components/Logo";
+import { NavigationItems } from "../_components/navigation/NavigationItems";
+import { TopNavbar } from "../_components/navigation/TopNavBar";
 
 export const metadata: Metadata = {
   title: "Authentication",
   description: "Authentication forms built using the components.",
 };
 
-const navigation = [
-  { name: "Analytics", href: "/analytics", icon: User, current: true },
-  { name: "Settings", href: "#", icon: User2, current: false },
-];
 const teams = [
   { id: 1, name: "Finance", href: "#", initial: "F", current: false },
   { id: 2, name: "Marketing", href: "#", initial: "M", current: false },
 ];
-
-const NavigationItems = ({ items }: { items: typeof navigation }) => {
-  return (
-    <ul role="list" className="-mx-2 space-y-1">
-      {items.map((item) => (
-        <li key={item.name}>
-          <Link
-            href={item.href}
-            className={cn(
-              item.current
-                ? "bg-muted"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted",
-              "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
-            )}
-          >
-            <item.icon
-              className={cn(
-                item.current
-                  ? "text-primary"
-                  : "text-muted-foreground group-hover:text-foreground",
-                "h-6 w-6 shrink-0"
-              )}
-              aria-hidden="true"
-            />
-            {item.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  );
-};
 
 const NavigationItemsInitials = ({ items }: { items: typeof teams }) => {
   return (
@@ -101,7 +69,7 @@ const DashboardDesktop = () => {
           <nav className="flex flex-1 flex-col">
             <ul role="list" className="flex flex-1 flex-col gap-y-7">
               <li>
-                <NavigationItems items={navigation} />
+                <NavigationItems items={dashboardNavItems} />
               </li>
               <li>
                 <div className="text-xs font-semibold leading-6 text-muted-foreground">
@@ -132,37 +100,35 @@ const DashboardDesktop = () => {
 
 const DashboardMobile = () => {
   return (
-    <>
-      <Sheet>
-        <SheetContent side="left">
-          <SheetHeader>
-            <Logo className="mb-4" />
-            <NavigationItems items={navigation} />
-            <div className="text-xs font-semibold leading-6 text-muted-foreground pt-4 text-left">
-              Your teams
-            </div>
-            <NavigationItemsInitials items={teams} />
-          </SheetHeader>
-        </SheetContent>
+    <Sheet>
+      <SheetContent side="left">
+        <SheetHeader>
+          <Logo className="mb-4" />
+          <NavigationItems items={dashboardNavItems} />
+          <div className="text-xs font-semibold leading-6 text-muted-foreground pt-4 text-left">
+            Your teams
+          </div>
+          <NavigationItemsInitials items={teams} />
+        </SheetHeader>
+      </SheetContent>
 
-        <div className="sticky top-0 z-40 flex items-center gap-x-6  px-4 py-4 shadow-sm sm:px-6 lg:hidden">
-          <SheetTrigger asChild>
-            <button type="button" className="-m-2.5 p-2.5 lg:hidden">
-              <span className="sr-only">Open sidebar</span>
-              <Menu />
-            </button>
-          </SheetTrigger>
-          <div className="flex-1" />
-          <Link href="#">
-            <span className="sr-only">Your profile</span>
-            <Avatar>
-              <AvatarFallback />
-              <AvatarImage src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
-            </Avatar>
-          </Link>
-        </div>
-      </Sheet>
-    </>
+      <TopNavbar className="md-hidden">
+        <SheetTrigger asChild>
+          <button type="button" className="-m-2.5 p-2.5 lg:hidden">
+            <span className="sr-only">Open sidebar</span>
+            <Menu />
+          </button>
+        </SheetTrigger>
+        <div className="flex-1" />
+        <Link href="#">
+          <span className="sr-only">Your profile</span>
+          <Avatar>
+            <AvatarFallback />
+            <AvatarImage src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
+          </Avatar>
+        </Link>
+      </TopNavbar>
+    </Sheet>
   );
 };
 
