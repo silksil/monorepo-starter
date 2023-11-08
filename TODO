@@ -1,6 +1,7 @@
 [ ] static testing
 
-    - [ x] include husky
+    - [ ] include husky
+    - [ ] include lint-staged
 
 [ ] deploy
 
@@ -20,3 +21,4 @@
 [ ] add favicon and opengraph image
 [ ] create a footer
 [ ] auto remove unused imports
+[] fix import error in the UI folder
