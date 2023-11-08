@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "ui";
 
 export function RecentSales() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 w-full">
       <div className="flex items-center">
         <Avatar className="h-9 w-9">
           <AvatarImage src="/avatars/01.png" alt="Avatar" />

@@ -1,18 +1,22 @@
+[ ] static testing
+
+    - [ x] include husky
+
+[ ] deploy
+
+    -[ ] update turbo.json
+
 [ ] Internationalization => https://locize.com/blog/next-13-app-dir-i18n/
 [ ] Updated colors - brand color - error color
-[ ] error logging
-[ ] update turbo.json
-[ ] deploy
+
+[ ] error logging (sentry)
+
+    - [] Setup a global error catcher
+    - [] sentry
+
 [ ] include data analytics tools
-[ ] static testing
-[ x] include husky
 [ ] instead of importing everything as `ui`, import it on the submap: `ui/lib/util`
-[ x ] create a appealing homepage
-[ ] create a proper navbar
-[ ] create a proper dashboard view
-[ ] update the colors of the borders
-[ ] conditionally show dashboard or homepage
 [ ] include example with modal
-[] create a global error catcher
 [ ] add favicon and opengraph image
-[ ] create a AuthGuard
+[ ] create a footer
+[ ] remove unused imports

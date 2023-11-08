@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Menu, User, User2 } from "lucide-react";
+import { Menu } from "lucide-react";
 import {
   Avatar,
   AvatarFallback,
@@ -9,12 +9,12 @@ import {
   SheetContent,
   SheetHeader,
   SheetTrigger,
+  TopNavbar,
 } from "ui";
 import { cn } from "ui/lib/utils";
-import { NavigationItem, dashboardNavItems } from "@/config/nav";
+import { dashboardNavItems } from "@/config/nav";
 import { Logo } from "../_components/Logo";
 import { NavigationItems } from "../_components/navigation/NavigationItems";
-import { TopNavbar } from "../_components/navigation/TopNavBar";
 
 export const metadata: Metadata = {
   title: "Authentication",
@@ -64,7 +64,7 @@ const DashboardDesktop = () => {
       <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
         <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r  px-6">
           <div className="flex h-16 shrink-0 items-center">
-            <Logo />
+            <Logo hasLink={true} />
           </div>
           <nav className="flex flex-1 flex-col">
             <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -98,12 +98,13 @@ const DashboardDesktop = () => {
   );
 };
 
-const DashboardMobile = () => {
+const DashboardMobileAndTablet = () => {
+  const classNameHidden = "lg:hidden";
   return (
     <Sheet>
-      <SheetContent side="left">
+      <SheetContent side="left" className={classNameHidden}>
         <SheetHeader>
-          <Logo className="mb-4" />
+          <Logo className="mb-4" hasLink={true} />
           <NavigationItems items={dashboardNavItems} />
           <div className="text-xs font-semibold leading-6 text-muted-foreground pt-4 text-left">
             Your teams
@@ -112,7 +113,7 @@ const DashboardMobile = () => {
         </SheetHeader>
       </SheetContent>
 
-      <TopNavbar className="md-hidden">
+      <TopNavbar className={classNameHidden}>
         <SheetTrigger asChild>
           <button type="button" className="-m-2.5 p-2.5 lg:hidden">
             <span className="sr-only">Open sidebar</span>
@@ -136,7 +137,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <DashboardDesktop />
-      <DashboardMobile />
+      <DashboardMobileAndTablet />
       <main className="py-10 lg:pl-72">
         <div className="px-4 sm:px-6 lg:px-8 lg:py-12">{children}</div>
       </main>

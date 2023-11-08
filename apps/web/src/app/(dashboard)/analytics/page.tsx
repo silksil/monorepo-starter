@@ -39,9 +39,6 @@ export default function Dashboard() {
             <TabsTrigger value="reports" disabled>
               Reports
             </TabsTrigger>
-            <TabsTrigger value="notifications" disabled>
-              Notifications
-            </TabsTrigger>
           </TabsList>
           <TabsContent value="overview" className="space-y-4">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -70,7 +67,7 @@ export default function Dashboard() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="w-full">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
                     Subscriptions
@@ -147,12 +144,12 @@ export default function Dashboard() {
                 </CardContent>
               </Card>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+            <div className="gap-4 md:grid-cols-2 lg:grid-cols-7  hidden lg:grid">
               <Card className="col-span-4">
                 <CardHeader>
                   <CardTitle>Overview</CardTitle>
                 </CardHeader>
-                <CardContent className="pl-2 hidden lg:flex">
+                <CardContent className="pl-2">
                   <Statistics />
                 </CardContent>
               </Card>

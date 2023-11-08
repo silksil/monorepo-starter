@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { Menu, Twitter, User, User2 } from "lucide-react";
-import { buttonVariants } from "ui";
+import { Twitter, User, User2 } from "lucide-react";
+import { TopNavbar, buttonVariants } from "ui";
 import { cn } from "ui/lib/utils";
 import { siteConfig } from "@/config/site";
 import { getPathnameInServer } from "@/app/_utils/router";
 import { Logo } from "../Logo";
 import { ThemeToggle } from "../ThemeToggle";
 import { SidebarNavigation } from "./SidebarNavigation";
-import { TopNavbar } from "./TopNavBar";
 
 export const Navbar = () => {
   const contentRight = () => {

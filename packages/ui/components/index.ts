@@ -49,5 +49,6 @@ export {
 } from "./Sheet";
 
 export { Tabs, TabsList, TabsTrigger, TabsContent } from "./Tabs";
+export { TopNavbar } from "./TopNavbar";
 
 export * from "./forms";
