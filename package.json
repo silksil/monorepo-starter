@@ -1,12 +1,12 @@
 {
-  "name": "turbo-starter",
+  "name": "frontend-starter",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "check-types": "tsc",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint --filter=web --filter=ui",
+    "ts": "turbo run ts",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -18,6 +18,10 @@
     "prettier-config": "workspace:*",
     "turbo": "^1.9.8"
   },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "packageManager": "pnpm@8.5.1",
   "engines": {
     "node": "18.16"
