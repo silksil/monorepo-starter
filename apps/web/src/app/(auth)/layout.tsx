@@ -5,7 +5,6 @@ import { Logo } from "../_components/Logo";
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  modal: React.ReactNode;
 }
 
 const AuthLayout = async ({ children }: RootLayoutProps) => (

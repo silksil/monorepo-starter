@@ -25,10 +25,9 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  modal: React.ReactNode;
 }
 
-const RootLayout = async ({ children, modal }: RootLayoutProps) => {
+const RootLayout = async ({ children }: RootLayoutProps) => {
   return (
     // Until next-themes fixes SSR, the 'suppressHydrationWarning' prop is needed.
     // https://github.com/pacocoursey/next-themes/issues/169
@@ -42,10 +41,7 @@ const RootLayout = async ({ children, modal }: RootLayoutProps) => {
       >
         <Providers>
           <div className="relative flex min-h-screen flex-col">
-            <div className="flex-1 relative isolate">
-              {children}
-              {modal}
-            </div>
+            <div className="flex-1 relative isolate">{children}</div>
           </div>
           <Toaster />
           <TailwindIndicator />

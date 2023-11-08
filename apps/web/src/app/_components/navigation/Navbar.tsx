@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Twitter, User, User2 } from "lucide-react";
+import { Twitter } from "lucide-react";
 import { TopNavbar, buttonVariants } from "ui";
 import { cn } from "ui/lib/utils";
 import { siteConfig } from "@/config/site";
